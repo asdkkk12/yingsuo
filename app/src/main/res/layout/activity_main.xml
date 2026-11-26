@@ -1,0 +1,44 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="24dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="定时考勤助手" android:textSize="28sp" android:textColor="#16346B" android:textStyle="bold" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+            android:text="每天 09:00 上班 · 22:00 下班\n北京时间，包含周末。失败持续响铃。" android:textSize="16sp" />
+        <TextView android:id="@+id/status" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" android:padding="16dp" android:background="#E4ECFF" android:textSize="16sp" android:textIsSelectable="true" />
+        <Button android:id="@+id/toggleSchedule" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="启用每日自动打卡" />
+        <Button android:id="@+id/viewAlarm" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="查看／关闭失败闹钟" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="1 · 权限与后台运行"
+            android:layout_marginTop="20dp" android:textSize="20sp" android:textStyle="bold" />
+        <Button android:id="@+id/notificationPermission" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="允许通知" />
+        <Button android:id="@+id/exactPermission" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="允许闹钟和提醒" />
+        <Button android:id="@+id/accessibilityPermission" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="启用考勤助手无障碍服务" />
+        <Button android:id="@+id/batteryPermission" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="电池优化设置" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="在 vivo 设置中允许自启动、后台运行，电池选择不受限制；菜单因系统版本而异。若无障碍被“受限设置”拦截，请在应用详情允许受限设置后重试。请保持闹钟音量可听，并测试勿扰和蓝牙输出。" />
+        <CheckBox android:id="@+id/vivoConfigured" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:minHeight="48dp" android:text="我已完成后台设置和闹钟声音检查" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="2 · 飞书入口配置"
+            android:layout_marginTop="20dp" android:textSize="20sp" android:textStyle="bold" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="飞书包名（默认国内版；变更后需重新适配）" />
+        <EditText android:id="@+id/packageInput" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:minHeight="48dp" android:inputType="textUri" android:singleLine="true" android:hint="com.ss.android.lark" android:importantForAutofill="no" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="依次点击的导航入口，每行一个。禁止填写打卡、提交、确认等操作按钮。" />
+        <EditText android:id="@+id/pathInput" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:minHeight="80dp" android:inputType="textMultiLine" android:gravity="top" android:hint="工作台&#10;考勤" android:importantForAutofill="no" />
+        <Button android:id="@+id/saveConfig" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="保存配置（暂停并清除适配确认）" />
+        <Button android:id="@+id/navigationTest" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="仅导航测试 · 不提交打卡" />
+        <TextView android:id="@+id/probeResult" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:text="尚未执行仅导航测试。完成后返回这里核对识别结果。" android:textIsSelectable="true" />
+        <Button android:id="@+id/verifyAdapter" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="核对并确认当前版本适配" android:enabled="false" />
+        <Button android:id="@+id/alarmTest" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="测试持续闹钟（需要手动关闭）" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="3 · 最近执行记录"
+            android:layout_marginTop="20dp" android:textSize="20sp" android:textStyle="bold" />
+        <TextView android:id="@+id/history" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:paddingTop="12dp" android:textIsSelectable="true" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp"
+            android:text="系统会显示即将到来的失败兜底闹钟。关机、强行停止或完全禁用应用时，本助手无法保证执行或提醒。仅适配已核对的页面版本，不修改定位。" android:textColor="#645C5C" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,3 @@
+<resources>
+    <string name="accessibility_description">仅在你开启的考勤任务或导航测试中，读取飞书考勤页面并点击已确认的导航与打卡按钮。不读取密码，不修改定位，不上传数据。请先执行仅导航测试并核对识别结果。</string>
+</resources>
